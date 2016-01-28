@@ -33,7 +33,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ��ȡCoolWeatherDB��ʵ��
+     * 获取CoolWeatherDB的实例
      */
     public synchronized static CoolWeatherDB getInstance(Context context) {
         if (coolWeatherDB == null) {
@@ -44,7 +44,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ��Provinceʵ��洢����ݿ�
+     * 将Province实例存储到数据库
      */
     public void saveProvince(Province province) {
         if (province != null) {
@@ -56,7 +56,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ����ݿ��ȡȫ�����е�ʡ����Ϣ
+     * 从数据库读取全国所有的省份信息
      */
     public List<Province> loadProvinces() {
         List<Province> list = new ArrayList<Province>();
@@ -81,7 +81,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ��Cityʵ��洢����ݿ�
+     * 将City实例存储到数据库
      */
     public void saveCity(City city) {
         if (city != null) {
@@ -93,7 +93,7 @@ public class CoolWeatherDB {
         }
     }
     /**
-     * ����ݿ��ȡĳʡ�����еĳ�����Ϣ
+     * 从数据库读取某省下所有的城市信息
      */
     public List<City> loadCities(int provinceId) {
         List<City> list = new ArrayList<City>();
@@ -119,7 +119,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ��Provinceʵ��洢����ݿ�
+     * 将County实例存储到数据库
      */
     public void saveCounty(County county) {
         if (county != null) {
@@ -132,7 +132,7 @@ public class CoolWeatherDB {
     }
 
     /**
-     * ����ݿ��ȡĳ�������е�����Ϣ
+     * 从数据库读取某城市下所有的县信息
      */
     public List<County> loadCounties(int cityId) {
         List<County> list = new ArrayList<County>();
